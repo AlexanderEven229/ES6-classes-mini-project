@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    class Plant {
+        constructor(_name) {
+            this.name = _name;
+        }
+
+        photosynthesis() {
+            console.log(`${this.name}s convert sunlight into energy!`);
+        }
+    }
+
+    class FloweringPlant extends Plant {
+        constructor(_name, _bloomTime) {
+            super(_name);
+            this.bloomTime = _bloomTime;
+        }
+
+        flowerTime() {
+            console.log(`${this.name}s grow flowers in the ${this.bloomTime} to reproduce!`)
+        }
+    }
+
+    const plant1 =  new Plant("Fir Tree");
+    plant1.photosynthesis();
+    const plant2 = new FloweringPlant("Azalia", "Spring");
+    plant2.photosynthesis();
+    plant2.flowerTime();
+</script>
+</body>
+</html>
